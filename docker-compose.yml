@@ -8,14 +8,15 @@ services:
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./wp:/var/www/html:delegated
+   
   
   mysql:
     image: mariadb:latest
     environment:
-      MYSQL_ROOT_PASSWORD: 5Passes2u
+      MYSQL_ROOT_PASSWORD: 5Passes2u #root mysql password
       MYSQL_DATABASE: wpdb
       MYSQL_USER: wpuser
-      MYSQL_PASSWORD: 5PassesAlos
+      MYSQL_PASSWORD: 5PassesAlos 
       SERVICE_NAME: mysql
       MYSQL_TABLE_PREFIX: wp3_
 
@@ -33,3 +34,4 @@ services:
       dockerfile: php.dockerfile
     volumes:
       - ./wp:/var/www/html:delegated
+  

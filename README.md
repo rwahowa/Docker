@@ -16,4 +16,4 @@ Ensure you have added a folder labelled *wp* . This is the folder with your word
 127.0.0.1       localhost sample.site django.test wordpress.site 
 ```
 
-The domains will be accessible on your local computer. 
+The domains will be accessible on your local computer.
