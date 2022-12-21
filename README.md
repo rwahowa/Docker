@@ -29,11 +29,4 @@ volumes:
 
 Install [mkcert](https://github.com/FiloSottile/mkcert#installation). or use the `install-mkcert.sh` file to install it on Debian or Ubuntu.
 
-In your nginx folder create a new folder where you'll store the generated keys. In my case it is called `nginx/certificates`.
-
-cd into the directory and generate  certificates for your domain. replace *wordpress.site* with your local domain.
-
-```bash
-cd nginx/certificates
-mkcert wordpress.site
-```
+Then follow the steps outlined in the [ssl section of this repo](https://github.com/rwahowa/ssl-Wordpress-Dev-Env-with-Docker).
