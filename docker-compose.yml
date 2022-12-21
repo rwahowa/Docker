@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./wp:/var/www/html:delegated
+  
+  mysql:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: hguyFtgfR4r9R4r76
+      MYSQL_DATABASE: wpdb
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: hguyFt6S95dgfR4ryb
+    expose:
+      - "3306"
+    volumes:
+      - /data/example/mysql:/var/lib/mysql
+    restart: always
+
+    
+  php:
+    # image: php:8.2.1RC1-fpm-alpine3.17
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    volumes:
+      - ./wp:/var/www/html:delegated
