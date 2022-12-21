@@ -12,14 +12,17 @@ services:
   mysql:
     image: mariadb:latest
     environment:
-      MYSQL_ROOT_PASSWORD: hguyFtgfR4r9R4r76
+      MYSQL_ROOT_PASSWORD: 5Passes2u
       MYSQL_DATABASE: wpdb
       MYSQL_USER: wpuser
-      MYSQL_PASSWORD: hguyFt6S95dgfR4ryb
+      MYSQL_PASSWORD: 5PassesAlos
+      SERVICE_NAME: mysql
+      MYSQL_TABLE_PREFIX: wp3_
+
     expose:
       - "3306"
     volumes:
-      - /data/example/mysql:/var/lib/mysql
+      - ./data:/var/lib/mysql
     restart: always
 
     

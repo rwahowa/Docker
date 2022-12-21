@@ -9,10 +9,10 @@ Ensure you have added a folder labelled *wp* . This is the folder with your word
 
 1. Download wordpress and add it to the directory wp. The directory should be in the root.
 2. In the root directory where your compose file is, run:
-`docker compose up`
+`docker compose up -d --build`
 3. Add a local domain for accessing your site. Open */etc/hosts* . Next to 127.0.0.1 , add the domain(s). In the following example I have added 3 domains.
 
-```
+```bash
 127.0.0.1       localhost sample.site django.test wordpress.site 
 ```
 
