@@ -34,4 +34,4 @@ services:
       dockerfile: php.dockerfile
     volumes:
       - ./wp:/var/www/html:delegated
-  
+    # command: chown -Rv www-data.www-data /var/www/html
