@@ -17,7 +17,6 @@ Ensure you have added a folder labelled *wp* . This is the folder with your word
 ```
 
 The domains will be accessible on your local computer.
-
 4. Make data persistent by creating a directory on your computer and linking it to docker mysql. The following line under mysql block in the docker compose file will link a directory named data:
 
 ```docker
