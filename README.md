@@ -1,6 +1,7 @@
 # Wordpress-Dev-Env-with-Docker
 
-Set up WordPress on Docker with Nginx and PHP 8.2 RC1 . Mostly Alpine images
+Set up WordPress on Docker with Nginx and PHP 8.2 RC1 . Mostly uses Alpine images.
+This is for use in your local computer to set up a WordPress local dev environment using Docker / Nginx/ PHP 8.2/ MariaDB.
 
 ## To make it work
 
@@ -22,4 +23,17 @@ The domains will be accessible on your local computer.
 ```docker
 volumes:
       - ./data:/var/lib/mysql
+```
+
+## Set up SSL on Localhost
+
+Install [mkcert](https://github.com/FiloSottile/mkcert#installation). or use the `install-mkcert.sh` file to install it on Debian or Ubuntu.
+
+In your nginx folder create a new folder where you'll store the generated keys. In my case it is called `nginx/certificates`.
+
+cd into the directory and generate  certificates for your domain. replace *wordpress.site* with your local domain.
+
+```bash
+cd nginx/certificates
+mkcert wordpress.site
 ```
