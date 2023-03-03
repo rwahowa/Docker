@@ -1,0 +1,6 @@
+wp/
+data/
+cache/
+nginx/certificates/ssl
+
+
