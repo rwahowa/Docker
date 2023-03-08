@@ -26,7 +26,7 @@ Give it time to finish setting up everything, including installing moodle. The u
 
 You can set up environment variables in your docker-compose to set a password, user and so much more. Just add the new variable under the environment section. The following are some that relate to your Moodle software. More can be found in the [Bitanami Moodle Docker page](https://hub.docker.com/r/bitnami/moodle/).
 
-## User and Site configuration
+### User and Site configuration
 
 ```docker
 
