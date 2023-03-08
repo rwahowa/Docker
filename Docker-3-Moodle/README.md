@@ -4,12 +4,12 @@ Moodle LMS set up based on the Bitnami Moodle image on docker. This Moodle runs 
 
 ## To make it work
 
-Just download the compose file and run it. Create a directory. Put the compose file in it. Then run it.
+Just download the compose file (`docker-compose.yml`) and run it. On your local PC, create a directory. Put the compose file in it. Then run it (compose up).
 
 1. In the root directory where your compose file is, run:
 
       ``` bash
-      docker compose up -d --build 
+      docker compose up -d
 
       # depending on your docker, you may need to run docker-compose or docker compose
       ```
