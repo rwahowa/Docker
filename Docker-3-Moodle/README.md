@@ -1,4 +1,4 @@
-# Moodle
+# Moodle Docker
 
 Moodle LMS set up based on the Bitnami Moodle image on docker. This Moodle runs on Apache.
 
