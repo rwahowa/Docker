@@ -2,6 +2,7 @@ version: '3.9'
 
 services:
   mysql:
+    container_name: moodlemysql
     image: mariadb:10.5
     environment:
       MYSQL_ROOT_PASSWORD: 5Passes2u #root mysql password
@@ -17,15 +18,17 @@ services:
     restart: always
     
   moodle:
+    container_name: mymoodle
     image: bitnami/moodle:latest
     ports:
       - 8080:8080
-      - 8443:8443
     environment:
       - MOODLE_DATABASE_HOST=mysql
       - MOODLE_DATABASE_USER=moodl3user
       - MOODLE_DATABASE_PASSWORD=5PassesAlos
-      - MOODLE_DATABASE_NAME=moodl3db
+      - MOODLE_DATABASE_NAME=moodl3db 
+      - MOODLE_USERNAME=madmen3 # Username for Moodle dashboard
+      - MOODLE_PASSWORD=MeinPasswort # Password for Moodle dashboard
       - PUID=998
       - PGID=100
     volumes:

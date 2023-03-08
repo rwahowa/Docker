@@ -20,7 +20,9 @@ Just download the compose file (`docker-compose.yml`) and run it. On your local 
       localhost:8080
       ```
 
-Give it time to finish setting up everything, including installing moodle. The username and password for `localhost:8080/admin` based on bitnami, is `user` and `bitnami`.
+Give it time to finish setting up everything, including installing moodle.
+
+The username and password for `localhost:8080/admin` **is indicated on the docker-compose file**.
 
 ## Password and environment variables
 
