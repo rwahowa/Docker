@@ -30,8 +30,8 @@ You can set up environment variables in your docker-compose to set a password, u
 
 ```docker
 
-    MOODLE_USERNAME: Moodle application username. Default: user
-    MOODLE_PASSWORD: Moodle application password. Default: bitnami
+    MOODLE_USERNAME: Moodle application username. **Default: user**
+    MOODLE_PASSWORD: Moodle application password. **Default: bitnami**
     MOODLE_EMAIL: Moodle application email. Default: user@example.com
     MOODLE_SITE_NAME: Moodle site name. Default: New Site
     MOODLE_SKIP_BOOTSTRAP: Do not initialize the Moodle database for a new deployment. This is necessary in case you use a database that already has Moodle data. Default: no
