@@ -47,3 +47,9 @@ You can just map the created key pair to docker as a volume. This is added in th
 Then add the Nginx configs in the Nginx conf file as attached in the `mysite.conf` file.
 
 Then expose port 443 .
+
+## Known Issue
+
+After introducing SSL, there is a **permission issue**. WordPress is unable to write to the folder, hence you cannot install plugins and themes via the dashboard.
+This is a known problem whenever working with PHP-FPM and Nginx in different containers. I have not taken the time to sit down and look into it yet.
+If you have a solution for this issue please make a request and fix it. I will merge it if it works.
