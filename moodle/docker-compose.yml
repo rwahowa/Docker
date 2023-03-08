@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mariadb:10.5
+    environment:
+      MYSQL_ROOT_PASSWORD: 5Passes2u #root mysql password
+      MYSQL_DATABASE: moodl3db
+      MYSQL_USER: moodl3user
+      MYSQL_PASSWORD: 5PassesAlos #MySQL user password
+      SERVICE_NAME: mysql
+      MYSQL_TABLE_PREFIX: mood3_
+    expose:
+      - "3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    restart: always
+    
+  moodle:
+    image: bitnami/moodle:latest
+    ports:
+      - 8080:8080
+      - 8443:8443
+    environment:
+      - MOODLE_DATABASE_HOST=mysql
+      - MOODLE_DATABASE_USER=moodl3user
+      - MOODLE_DATABASE_PASSWORD=5PassesAlos
+      - MOODLE_DATABASE_NAME=moodl3db
+      - PUID=998
+      - PGID=100
+    volumes:
+      - ./moodle:/bitnami/moodle
+      - ./MoodleData:/bitnami/moodledata
+    depends_on:
+      - mysql
+  
+  

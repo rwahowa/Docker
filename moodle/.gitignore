@@ -1,0 +1,7 @@
+moodle/
+MoodleData/
+data/
+cache/
+nginx/certificates/ssl
+
+
